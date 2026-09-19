@@ -2,6 +2,8 @@
 
 This standard defines the work required to complete each project milestone. Apply the relevant sections progressively; do not turn Lab 01 into a full cloud platform.
 
+Use the [learning rules](LEARNING-RULES.md) for daily issue scope. Technology depth, ETL/ELT, production deployability and independent interview practice are cumulative project requirements. Daily implementation tasks build toward these gates; they do not each require a complete milestone report.
+
 ## 1. Understand the problem
 
 Explain the consumer, business outcome, input contracts, expected output and correctness rules. State what is known and what is assumed. Translate terms such as reliable, fast and scalable into measurable requirements.
@@ -52,6 +54,10 @@ Use the [evidence template](../templates/milestone-evidence.md). Each required i
 
 ## Progressive gates
 
+Apply the [technology depth requirements](TECHNOLOGY-DEPTH.md) progressively: explain the selected technology's behavior, expose a relevant edge case and demonstrate its handling. At milestone review, record version-specific limits, an unfamiliar variation and justified trade-offs. Do not add every depth experiment or a documentation deliverable to each beginner issue.
+
+Production deployability is a required final outcome. The [deployment acceptance gates](PRODUCTION-DEPLOYMENT.md) require working infrastructure and release automation, secure configuration, migrations, monitoring, rollback and measured restore evidence. A successful local command or a written architecture does not pass that gate.
+
 | Gate | What must exist |
 |---|---|
 | Foundation | Reproducible local program, correct results, meaningful tests and explained error handling |
@@ -59,6 +65,7 @@ Use the [evidence template](../templates/milestone-evidence.md). Each required i
 | Cloud/platform | Repeatable deployment, identity controls, operational visibility and cost evidence |
 | AI solution | Evaluated behavior, source/permission handling, controlled tools and release checks |
 | Reliability | Service objectives, observed operation, failure drills and measured restore |
+| Production deployment | Reviewed deployment gates, identified release artifact, tested staging promotion and recovery, and concrete production configuration; actual production deployment recorded separately |
 | Expert practice | Independent extension/debugging, peer review, reusable software and defensible architecture |
 
 Record milestones as planned, implementing, evidence-ready, reviewed or complete. Use complete only after the applicable criteria pass. Real production ownership remains a separate evidence field.

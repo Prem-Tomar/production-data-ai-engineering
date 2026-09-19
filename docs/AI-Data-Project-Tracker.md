@@ -19,6 +19,21 @@ Companion to `AI-Data-Architecture-Roadmap.md`. Planning horizon: 24 months at t
 
 ## Milestones
 
+Technology depth and production deployability are required outcomes. Use the [depth coverage plan](TECHNOLOGY-DEPTH.md) and [deployment gates](PRODUCTION-DEPLOYMENT.md) when reviewing the relevant milestone. The 30 daily issues are the initial implementation sequence, not evidence that these outcomes are complete.
+
+| Cross-cutting outcome | Current status | Evidence |
+|---|---|---|
+| First 30 days: coached working/intermediate Python and useful local ETL tool | Planned; independently assessed on Day 30, not awarded by elapsed time | [Python coaching and gates](PYTHON-COACHING.md) |
+| Advanced Python during platform implementation through expert defense | Planned | [Master-level syllabus](PYTHON-COACHING.md) |
+| Technology-specific edge cases, limits and independent variations | Planned; record per technology in milestone evidence | None yet |
+| Repeatable staging deployment with versioned artifacts and infrastructure | Not implemented | None yet |
+| Reviewed production deployment gates and production configuration | Not assessed | None yet |
+| Approved production deployment | Pending implementation, environment access and ownership | None yet |
+| Sustained production operation | Not demonstrated | None yet |
+| Full ETL/ELT: extraction, modelling, CDC, orchestration, quality and lineage | Planned beyond the first ingestion increments | [Implementation sequence](ETL-AND-INTERVIEW-TRACK.md) |
+| Interview readiness: independent coding, SQL, debugging, design and two mocks | Not assessed | [Practice and gate](ETL-AND-INTERVIEW-TRACK.md) |
+| Dated employer requirements mapped to learning and explicit gaps | Research completed September 19, 2026; skill evidence remains pending | [Ten-posting analysis](JOB-REQUIREMENTS-2026-09.md) |
+
 | ID | Target | Deliverable | Status | Evidence link | Review outcome |
 |---|---|---|---|---|---|
 | M01 | Month 1 | Baseline and first ingestion job | Not started | — | — |
@@ -87,6 +102,9 @@ Record the interpreter version/build with each concurrency or runtime experiment
 - Architecture decision and trade-off:
 - Reviewer feedback:
 - Next smallest useful increment:
+- Technology nuance observed and remaining depth gap:
+- Independent interview variation attempted / outcome:
+- Target-role requirement addressed / remaining evidence gap:
 
 ## Phase review — repeat at every gate
 
