@@ -14,6 +14,8 @@ The update restriction applies to both direct pushes and PR merges. Feature bran
 
 ## Pull-request contents
 
+Use neutral topic-based branch names such as `docs/learning-conventions` or `feature/trade-validation`. Use project terminology in commit messages, issue links and pull requests; omit assistant/tool branding and attribution trailers. Link to merged documentation on `master` or an appropriate stable revision rather than a temporary branch.
+
 - State the learning objective and behavior change.
 - Link acceptance criteria and evidence.
 - Describe tests actually run and failures investigated.
