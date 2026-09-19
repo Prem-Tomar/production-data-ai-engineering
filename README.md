@@ -8,6 +8,32 @@ A project-based path from Oracle/PLSQL and financial-services database engineeri
 
 **Repository status:** Curriculum, project specifications and templates are ready. The application, automated tests and cloud deployments have not been implemented yet. A completed lab demonstrates tested engineering behavior; production readiness still requires workload-specific review and real operational evidence.
 
+## Learning goal
+
+Build on existing Oracle/PLSQL and financial-services experience to independently design, implement, debug and operate Python-based data and AI systems. Learn through small changes to one useful project, introducing each concept when the implementation needs it.
+
+The career direction is **Senior/Lead Data Engineer for financial-services platforms**, progressing toward **AI Data Platform Architect / Principal Data Engineer** as independent delivery, architecture judgment and operational ownership grow.
+
+## Ultimate outcome
+
+Deliver and explain a **Financial Data Reliability and AI Investigation Platform** that turns synthetic financial events into trusted data and supports controlled, evidence-backed investigations. By the end of the full track, the learner should be able to:
+
+- Build maintainable Python software with clear interfaces, meaningful tests, packaging and measured performance.
+- Ingest, validate and reconcile financial events while handling duplicates, corrections, cancellations, replay and recovery.
+- Develop SQL and Spark data models and deploy them on a cloud platform with access controls, automated delivery and understood costs.
+- Build a permission-aware AI investigation assistant with cited answers, controlled tools and measured evaluation results.
+- Diagnose failures, restore service and data, explain architecture trade-offs, and independently extend the system after review.
+
+The deliverable includes working software and a portfolio of verified results: code reviews, reconciliation reports, performance measurements, recovery exercises and AI evaluations. Completing the track should demonstrate these capabilities; job titles and real production ownership depend on evidence beyond a learning project.
+
+## First 30 learning days
+
+Follow the [daily GitHub issues](https://github.com/Prem-Tomar/production-data-ai-engineering/issues?q=is%3Aissue%20%22Day%22%20sort%3Acreated-asc) in order, starting with [Day 01](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/1). Each issue contains a goal, context, one focused implementation task, observable acceptance criteria and searchable hints.
+
+The sequence builds from a runnable Python script to a local PostgreSQL ingestion command with event history, current trade state, replay handling, recovery checks and automated validation. This is the first implementation stage of the longer track, not completion of the full platform or every Lab 01 gate. Day numbers indicate learning order; use the 15–20 hour weekly budget and carry unfinished work forward rather than skipping criteria.
+
+Run the program to check each early increment. Add automated tests, documentation and deeper operational evidence in the issues and milestone reviews dedicated to them; they are not extra deliverables on every beginner issue. Keep later Lab 01 and roadmap requirements open until their evidence exists.
+
 ## Start here
 
 1. Read the [skills assessment and first 90 days](docs/Sujeet-Skills-Gap-Assessment.md).
