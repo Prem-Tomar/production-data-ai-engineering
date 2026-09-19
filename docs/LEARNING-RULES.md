@@ -66,6 +66,7 @@ Search for <general concept>. Notice <one or two useful ideas>.
 ## Publishing and verification
 
 - Push authorized project updates on a feature branch and keep the pull request reviewable. Only @Prem-Tomar updates or merges master under the repository policy.
+- Use neutral topic-based branch names and project terminology in issues, commit messages and pull requests. Do not include assistant/tool branding or attribution trailers. Prefer master or a stable revision for documentation links after merging.
 - Verify issue publication, local links, document consistency and relevant code behavior. Report actual checks, not anticipated results.
 - Use planned, implementing, evidence-ready, reviewed and complete accurately. Preserve unresolved requirements in the tracker.
 
@@ -77,7 +78,7 @@ Search for <general concept>. Notice <one or two useful ideas>.
 | Apply the reusable learning-issue pattern | Existing 30 issues use the five sections above |
 | Create issues for the next 30 days | Days 01–30 published as issues #1–#30; completion remains learner work |
 | Add goal and ultimate outcome to README | README includes both and links the daily sequence |
-| Push it | Documentation branch and PR #31 created; subsequent queued documentation updates continue there |
+| Push it | Initial README merged through PR #31; expanded curriculum merged through PR #32; subsequent changes use a new reviewable PR |
 | Include nuances of each selected technology | Technology depth plan and milestone evidence requirements |
 | Make the project deployable to production | Deployment design, release gates and separate readiness/operation states |
 | Record all the rules | This document and root AGENTS.md |
@@ -88,5 +89,6 @@ Search for <general concept>. Notice <one or two useful ideas>.
 | Working/intermediate Python in 30 days with project value | First-month local ETL deliverable and independent assessment; original pipeline tasks preserved as P01–P30 |
 | Teach late binding and binding/global nuances | Dedicated binding/scope lab and Days 12, 13 and 23; applied assessment on Day 30 |
 | Push the accumulated changes when done | Update the existing feature branch and PR after verification; master merge remains with the owner |
+| Remove tool identifiers | Neutral branch and metadata naming; learning issue links use merged documentation on master |
 
 When adding a new request, update this ledger and any affected issue, roadmap or acceptance gate. A documentation update records the requirement; it does not complete the associated learning or software implementation.

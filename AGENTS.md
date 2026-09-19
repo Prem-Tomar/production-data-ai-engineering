@@ -11,3 +11,4 @@ Read [the learning rules](docs/LEARNING-RULES.md) before changing curriculum, is
 - Keep the beginner Python/cloud baseline and 15–20 hour weekly budget. Do not require tests/docs on every early issue; schedule them explicitly and retain milestone/release evidence gates.
 - Use synthetic or explicitly permitted data. Never claim implementation, production readiness or interview proficiency based only on a plan.
 - Follow CONTRIBUTING.md: use a feature branch and pull request; master pushes and merges remain with @Prem-Tomar. Keep PR scope and description current when requests accumulate.
+- Use neutral project terminology in branch names, issue links, commit messages and pull requests. Do not add assistant/tool branding or attribution trailers. Link learning issues to merged documentation on master or an appropriate stable revision.
