@@ -1,0 +1,45 @@
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local data, rendered sources and machine-specific files
+work/
+data/raw/
+data/generated/
+*.log
+*.pdf
+*.png
+*.db
+*.sqlite*
+.DS_Store
+Thumbs.db
+.idea/
+
+# Cloud state and local plans
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+
+# Notebook execution state
+.ipynb_checkpoints/
