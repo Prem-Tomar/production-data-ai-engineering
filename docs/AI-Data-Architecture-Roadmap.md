@@ -59,6 +59,8 @@ flowchart LR
 
 ## Tool choices
 
+Follow the [recorded learning rules](LEARNING-RULES.md) and [recent requirement mapping](JOB-REQUIREMENTS-2026-09.md). Keep mandatory skills for a target role visible even when they require a separate platform branch. Candidates are not selected technologies until their purpose, access and learning task are explicit.
+
 Learn concepts through one coherent stack. My suggested local starting point is Python, SQL, Git, PostgreSQL and Docker. Use PostgreSQL with pgvector for the initial vector-search experiment. Keep your existing database as a source if practical.
 
 Add one orchestration tool when scheduling and recovery requirements justify it; Airflow is a candidate, with final selection based on access and target work. Introduce dbt-style SQL transformations/tests in phase 2, PySpark and one lakehouse table format in phase 3, and a bounded Kafka exercise for event semantics. These enter sequentially, not in the first week.
@@ -70,6 +72,10 @@ Infrastructure as code and deployment automation enter in phase 3. Kubernetes, m
 ## Roadmap and acceptance gates
 
 Time windows are estimates. A phase ends when its evidence is reviewable. Strengths can be demonstrated early; gaps should receive more time.
+
+Apply the [technology depth plan](TECHNOLOGY-DEPTH.md) to every selected technology, including its failure cases, execution boundaries and version-specific limitations. Keep each daily issue focused on one implementation concept; deeper experiments enter when their prerequisites exist. Tool candidates become explicit choices with coverage requirements when adopted.
+
+The end product must be deployable to production. Follow the [production deployment gates](PRODUCTION-DEPLOYMENT.md): build the deployment path during phase 3, extend it for AI in phase 4, verify operational readiness in phase 5, and perform an approved production transfer in phase 6 when access exists. Earlier production releases must pass all applicable gates too. Track deployability, live deployment and sustained operation separately.
 
 ### Phase 1 — Engineering foundations | Months 1–2
 
@@ -111,6 +117,8 @@ Time windows are estimates. A phase ends when its evidence is reviewable. Streng
 
 **Month 5:** Failure cases, reconciliation and operational documentation.
 
+**Required ETL depth:** Follow the [ETL/ELT implementation sequence](ETL-AND-INTERVIEW-TRACK.md). Add consistent extraction, watermark ties, CDC/delete handling, type-1/type-2 dimensions, as-of joins, incremental-versus-full reconciliation and source-to-target lineage as small successive tasks. Introduce Pandas/NumPy dtypes and Parquet/PyArrow file handling before the distributed performance exercises. Scheduling, quality and recovery are part of ETL completion, not optional polish.
+
 ### Phase 3 — Cloud and architecture | Months 6–8
 
 **Study:** Cloud identity, networking, object storage, managed databases, encryption, infrastructure as code, CI/CD, deployment rollback, distributed-system consistency and partitioning. Learn PySpark joins, skew, shuffle and file layout through measured experiments.
@@ -131,6 +139,8 @@ Time windows are estimates. A phase ends when its evidence is reviewable. Streng
 **Month 7:** Distributed processing and performance experiments.
 
 **Month 8:** Automated deployment, rollback and architecture review.
+
+**Market-linked platform coverage:** Exercise AWS storage/identity, catalogue/query access and one managed workflow; select further services from the [job requirement matrix](JOB-REQUIREMENTS-2026-09.md). Snowflake and Azure/Fabric receive implementation branches when targeting roles that require them. Capture metadata, lineage and dataset ownership, not just compute and storage. Compare enterprise scheduler and CI concepts with employer tools without claiming hands-on experience in unavailable products.
 
 **Complementary exercise:** Process a bounded stream of trade amendments/cancellations using Kafka or an accessible equivalent. Explain partition-key ordering, event time, consumer offsets, late events and replay. Contrast it with batch processing and retain streaming only where a latency requirement justifies it. Include this within the phase budget; extend the phase if the core cloud/Spark gates remain open.
 
@@ -155,6 +165,8 @@ Time windows are estimates. A phase ends when its evidence is reviewable. Streng
 **Month 10:** RAG responses, evaluation and structured-query routing.
 
 **Month 11:** Retrieval experiments, permissions and regression testing.
+
+**Backend and role-specific depth:** Build a restricted Python API and an authorization-aware cache experiment where useful. Include request validation, resource ownership, expiry and invalidation. For NLP-oriented target roles, add a bounded text-processing/pretrained-model exercise and reproducible MLflow tracking. These branches come after the data foundations and use the existing phase budget.
 
 **Current AI complement:** After the basic RAG gates pass, add one bounded tool-using workflow for an investigation request: retrieve procedures, query an approved read-only view, assemble evidence and request human review. Measure task success, tool-selection failures, latency and cost. Learn context assembly and tool/function schemas; explore MCP only if a real integration requires it. Require authorization outside the model. A graph/entity-resolution exercise is optional if the scenario genuinely needs relationship traversal. Keep these within the AI phase or defer them rather than weakening Python/data foundations.
 
@@ -223,6 +235,8 @@ Python development runs throughout the first six phases using the track below. T
 
 ## Python mastery track — integrated throughout
 
+**Start here:** [Python coaching: foundations to expert practice](PYTHON-COACHING.md). The first 30 days target working intermediate Python through a real local ETL program. Day 1 teaches the mental model before code; subsequent sessions teach, demonstrate, guide and assess. Include binding/scope, default arguments and late binding early, then deepen advanced topics while building the platform. The original implementation sequence is retained in [the pipeline backlog](PIPELINE-BACKLOG.md).
+
 Here, master-level Python means being able to design, debug, optimize, test, explain and maintain substantial Python systems independently. Knowing obscure syntax or finishing a course is insufficient. The target is expert applied engineering for data and AI; interpreter/compiler specialization is an optional further path.
 
 | Period | Knowledge to develop | Practical evidence |
@@ -290,12 +304,14 @@ Use up to five additional hours for cloud labs, architecture review, interview p
 
 Every week: finish one reviewable increment and record the evidence. Every four weeks: demonstrate the system, review gaps and revise the next four-week backlog. Every phase: seek an independent review where possible and revisit weak areas before adding more tools.
 
+Begin short explanations and unfamiliar variations during the foundation weeks. From month 4, follow the [interview practice and readiness gate](ETL-AND-INTERVIEW-TRACK.md) with timed Python/SQL, ETL debugging, design and leadership exercises inside the weekly allocation. Keep target-role evidence and professional-experience constraints distinct; two independent mocks are required before claiming interview readiness.
+
 ## First four weeks
 
-1. **Week 1:** Assess SQL, Python, Git, Linux and cloud skills. Validate existing SQL knowledge through an unfamiliar tuning problem. Write the financial-data business problem, select synthetic trades/accounts/instruments and create the repository. Define the first ingestion acceptance test. The companion assessment provides the full 13-week starting backlog.
-2. **Week 2:** Implement a small Python loader with configuration, structured logs and connection handling. Explain each component without relying on generated code you cannot understand.
-3. **Week 3:** Add incremental state, duplicate handling and recovery after a forced interruption. Test malformed input and a source timeout.
-4. **Week 4:** Add automated checks, containerized execution and a setup guide. Ask someone to run the project. Record the first demonstration and adjust the schedule to actual learning speed.
+1. **Week 1:** Begin coached Python: interpreter, names/values, types, strings, conditions and collections. Start the tiny project command only after explanation and guided practice. Retain the existing SQL background as context.
+2. **Week 2:** Develop loops, dictionaries, sets, functions, name binding/scope, mutability and traceback reading in that same program.
+3. **Week 3:** Add errors, modules, Decimal, timezone handling, file/JSON reading and incremental iteration through coached exercises.
+4. **Week 4 and final sessions:** Add a typed trade object, closure-capture exercise, meaningful tests, command configuration/logging and file output. Demonstrate a working local ETL tool and complete the independent variation/debugging check. Resume PostgreSQL and operational ingestion tasks from the preserved backlog afterward; carry unresolved learning forward.
 
 ## Portfolio structure to create during implementation
 

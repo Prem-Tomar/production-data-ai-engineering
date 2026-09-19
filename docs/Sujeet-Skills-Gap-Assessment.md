@@ -81,14 +81,14 @@ Confirmed availability: 15–20 hours per week. Thirteen weeks provide about 195
 
 | Week | Work | Evidence to save |
 |---|---|---|
-| 1 | Baseline Python/SQL/Git/Linux assessment; select synthetic trades, accounts and instruments | Skills inventory and a one-page project charter |
-| 2 | Python types, collections, functions, Decimal and timezone-aware timestamps | Small, tested financial-data transformations |
-| 3 | Modules, files, API pagination, exceptions and context managers | Runnable ingestion command and failure examples |
-| 4 | Database transactions, parameterized SQL and batched writes | Idempotent loader with rollback test |
-| 5 | Iterators, generators and bounded-memory processing | Memory measurements for increasing input sizes |
-| 6 | Typing, dataclasses, interfaces and configuration | A second source adapter and documented contracts |
-| 7 | Unit/integration tests, logging and debugging | Regression checks for duplicates, bad input and interruptions |
-| 8 | Git review workflow, packaging and automated checks | Clean installation and automated test run |
+| 1 | Coached Python mental model, guided interpreter/script work, types, strings and decisions | Explained examples and first small project command |
+| 2 | Collections, loops, functions, name binding/scope, mutability and debugging | Guided and independent changes to that command |
+| 3 | Exceptions, modules, Decimal, timezones and file/JSON processing | Reusable transformation helpers with visible failure behavior |
+| 4 | Generators, dataclasses, late binding, testing, CLI and local ETL output | Useful local ETL tool and independent working/intermediate Python assessment |
+| 5 | PostgreSQL transactions, parameterized SQL and event history from the preserved pipeline backlog | Correct storage, replay and rollback behavior |
+| 6 | Versioned current state, reconciliation and bounded batches | Expected results for amendments, cancellations and late arrivals |
+| 7 | Checkpoints, restart tests, quarantine and HTTP source integration | Recovery and source-failure evidence |
+| 8 | Packaging, CI and consolidation of unfinished pipeline work | Clean installation and automated test run |
 | 9 | Trade facts, account/instrument dimensions and historical changes | Model diagram and business definitions |
 | 10 | Incremental updates, cancellations and late arrivals | Reconciliation and replay reports |
 | 11 | Scheduler dependencies, retries and backfill behavior | Scheduled workflow and recovery demonstration |

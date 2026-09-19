@@ -14,6 +14,8 @@ This route connects his Oracle performance and banking expertise with skills exp
 
 ## Current employer evidence
 
+The [September 19 detailed refresh](JOB-REQUIREMENTS-2026-09.md) is the current source of posting status, required/preferred distinctions and curriculum coverage. It reviews ten readable employer pages, adds a direct Python/ETL/PLSQL bridge role and records the previously listed Python AI Engineer URL as unavailable on direct retrieval. The earlier comparison below is retained as research context, not a claim that every link remains open.
+
 | Employer and role | Date shown / location | Relevant requirements and interpretation |
 |---|---|---|
 | [Citi: Senior Data Engineer, Apache Spark and SQL, VP](https://jobs.citi.com/job/pune/senior-data-engineer-apache-spark-and-sql-vice-president/287/100117039360) | September 3, 2026 / Pune | Databricks on AWS, Spark, Delta Lake, modernization and performance. Especially relevant to his existing strengths. Requires 11+ years in data engineering/distributed systems and strong hands-on Spark; current Oracle tenure alone does not establish a match. |
@@ -25,7 +27,7 @@ This route connects his Oracle performance and banking expertise with skills exp
 | [Citi: Senior Gen AI Engineer, VP](https://jobs.citi.com/job/pune/senior-gen-ai-engineer-vice-president/287/100724668464) | September 16, 2026 / Pune or Chennai | Python application engineering, RAG, backend services and testing. Recommended qualifications include 10+ years of software development with a strong Python focus; short-term study cannot be represented as that experience. |
 | [Amazon Music: Machine Learning Engineer](https://amazon.jobs/en/jobs/10510880/machine-learning-engineer-amazon-music-catalog-quality) | Reviewed September 19, 2026; posting date not established / Bengaluru | PyTorch/JAX and large-scale ML infrastructure experience illustrate the additional specialization required for direct ML-engineering roles. |
 
-These pages show employers advertising the skills at the research date. Openings may change before he is ready. Recheck a fresh sample each quarter and before applying.
+Opening status can change; use the detailed refresh above for the latest checked status. Recheck a fresh sample each quarter and before applying.
 
 ## Which paths to prioritize
 
@@ -62,7 +64,7 @@ Treat Snowflake/Fabric, additional clouds and extra agent frameworks as role-spe
 
 ## Practical interview preparation
 
-From month 4, use one or two weekly sessions within the study budget:
+Follow the [ETL and interview track](ETL-AND-INTERVIEW-TRACK.md). Start brief explanations and unseen variations during foundations; from month 4, use one or two weekly sessions within the study budget:
 
 - Python coding: collections, complexity, iterators, file/API processing, errors, testable design and debugging. Add appropriate algorithm practice for the actual interview format.
 - SQL: window functions, joins, nulls, reconciliation, dimensional modelling and execution-plan reasoning.
