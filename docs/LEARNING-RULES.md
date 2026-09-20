@@ -13,6 +13,7 @@ Recorded from the user's cumulative requests; updated September 20, 2026. These 
 7. The first 30 days target working, intermediate Python through useful project progress. Teach first, then guide practice, then ask for independent code. Day 1 starts with Python coaching and no coding prerequisite.
 8. Continue advanced/master-level Python during the rest of the project, with independent practical gates. Explicitly teach binding/rebinding, local/global/nonlocal scope, mutation versus rebinding, default-argument timing and late binding in the first-month sequence.
 9. Keep coaching short and make learning primarily programming-based. Run an example, change it, break or debug it, then apply the concept. No written theory answers or definition quizzes are required for daily completion.
+10. As part of the review-and-close workflow, keep a rolling learning queue: for N newly closed learning issues, publish N new self-contained issues and N matching explanations with runnable examples. Begin after Day 30 and continue the roadmap. Track each replacement once using [the queue procedure](LEARNING-QUEUE.md); retrying or closing a reopened issue must not generate another replacement. Review and closure trigger this work; do not create a scheduled monitor or cron job.
 
 ## Required issue pattern
 
@@ -102,5 +103,7 @@ Search for <general concept>. Notice <one or two useful ideas>.
 | Keep issues as plain tasks | Direct implementation instructions, concrete results and searchable hints without instructional-role wording |
 | Retain explanations for the first ten tasks | Self-contained study notes and runnable examples linked from Days 1–10, available during review |
 | No dependencies in any task | All 30 tasks include their own inputs and setup; debugging and extension tasks supply the code they need; no external person chooses an input or unlocks progress |
+| Replace closed issues and add the same number of explanations | One replacement issue and one published explanation per newly closed learning issue; rolling queue procedure and persistent replacement ledger prevent duplicates |
+| Trigger replenishment during review and closure; no cron | Perform replacement work in the same review-and-close workflow, without scheduling or background polling |
 
 When adding a new request, update this ledger and any affected issue, roadmap or acceptance gate. A documentation update records the requirement; it does not complete the associated learning or software implementation.

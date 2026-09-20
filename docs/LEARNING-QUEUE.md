@@ -1,0 +1,26 @@
+# Rolling learning queue
+
+When reviewing and closing learning issues, create one new self-contained learning issue and add one matching explanation with a small runnable example for each newly closed issue. Closing three issues requires three new issues and three explanations. Complete this replenishment within the same review-and-close workflow. There is no cron job, scheduled monitor or background polling. This keeps a normal working queue of 30 open learning issues while the curriculum continues beyond the initial foundation.
+
+The initial tracked issues are #1â€“#30, all open when this rule was recorded on September 20, 2026. No replacement is due at that baseline. Newly published replacement issues become tracked learning issues themselves. Pull requests, unrelated maintenance issues and external repositories are outside this queue.
+
+## Numbering and content
+
+- Use the next unused learning day, beginning with Day 31. GitHub assigns its own issue numbers; never reuse a closed issue's number or assume it equals the day number.
+- Select the next useful unfinished topic from the Python progression, preserved pipeline backlog and project roadmap. Keep the 15â€“20 hour weekly budget, technology depth, ETL, interview practice and production requirements. Closure alone does not establish proficiency or satisfy a milestone gate.
+- Keep every new task independent: include its inputs, setup, run command, required starter code, expected outputs and error cases. Use Goal, Context, Task, Acceptance Criteria and Hint without role labels or a dependency on another issue's code.
+- For each new issue, add a dedicated explanation to the relevant study document, following the first-session format in [PYTHON-COACHING.md](PYTHON-COACHING.md): a short explanation defining new terms, a small runnable example, expected output and a relevant nuance. Include a variation when helpful without solving the entire task.
+- Extend [the versioned task descriptions](PYTHON-DAILY-TASKS.md) for continuing Python work; use an appropriately named task document for later technology tracks. Link each new task to its matching explanation and index the additions. Preserve existing explanations and the original 30 tasks.
+
+## Publication and recovery
+
+1. Review the requested learning issues and their evidence, then close them as authorized. Confirm their GitHub states and read the [replacement ledger](learning-queue.json), including any newer ledger on an open queue-update pull request. Each issue newly closed in this workflow and absent from the ledger is due for one replacement. Resume any incomplete entries from an interrupted review-and-close workflow before planning new ones. If the user already closed a reviewed issue, use its confirmed closure rather than closing it again.
+2. Reserve a unique next day and record the source issue number in the ledger on a neutral feature branch. Use one entry per source issue. A record includes `source_issue`, `day`, `status`, `replacement_issue`, `explanation_path`, `explanation_anchor` and `explanation_revision`. Initially unknown publication fields can be null. Advance `next_day` when reserving a day; also check existing issues and pending branches for collisions.
+3. Write and verify the new explanation and task text. Push the documentation commit and create or update a pull request. Do not push to or merge master. The published commit makes study material available while review is pending.
+4. Before creating an issue, search all open and closed learning issues for the reserved day and the neutral metadata marker `<!-- learning-replacement-for: SOURCE_NUMBER -->`. If it already exists, verify and resume it instead of creating another. Add that marker to the new issue body without adding a visible prerequisite or extra main section.
+5. Create exactly one issue for each due source, linking to the explanation at its published commit and anchor. Record the assigned issue number and revision in the ledger, add the issue link to the task index, then push the ledger/index update to the same pull request.
+6. Verify the published title/body, reachable explanation section and one-to-one ledger mapping. Mark the entry `verified` only when the new issue and explanation are both available. If publication partially fails, retain `reserved`, `notes_published` or `issue_published` status as appropriate and resume the missing step when continuing the review workflow. Report the remaining work explicitly; do not describe a partial publication as complete.
+
+Do not use the total open-issue count alone to decide how many issues to create. Each unique tracked source issue receives at most one replacement. Reopening a replaced issue may temporarily make the queue larger than 30; do not close or delete it to force the count. Closing it again does not earn another replacement. Record the actual review outcome; an issue closed without completing the learning work is not evidence of proficiency.
+
+The trigger is the review-and-close action itself. This rule is a required step in that workflow, not an independently running event listener. Reuse pending work and inspect remote state before retries. Report the closed issues, their replacements and their explanations together when the workflow finishes. Do not create issues now merely to anticipate future closures.

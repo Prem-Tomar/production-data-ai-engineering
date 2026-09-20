@@ -3,6 +3,7 @@
 Read [the learning rules](docs/LEARNING-RULES.md) before changing curriculum, issues or project implementation. They record the user's cumulative requirements.
 
 - Requests are additive. Keep an explicit request ledger and finish earlier queued work unless the user cancels or replaces it.
+- As part of reviewing and closing learning issues, replenish the queue one-for-one: each newly closed learning issue requires one new self-contained issue and one matching explanation with a runnable example. Follow docs/LEARNING-QUEUE.md and its replacement ledger; never duplicate a replacement on retries or reclosure. Publish explanations before linking them from new issues. Do not schedule a monitor, cron job or recurring check for this rule.
 - Teach through focused implementation issues using Goal, Context, Task, Acceptance Criteria and Hint. Define unfamiliar terms; provide searchable hints, not complete solutions.
 - Preserve the 30-day issue sequence. It now starts with Python coaching and targets working intermediate Python through a local ETL tool. Preserve the earlier pipeline work in docs/PIPELINE-BACKLOG.md; do not discard it or claim it is complete.
 - Teach before assigning code: explain, demonstrate, predict, guide practice, then assess an independent variation. Day 1 is coaching without a coding prerequisite. Cover name binding, global/nonlocal scope, mutation/defaults and late-bound closures within the first month; deepen advanced Python while building the project.
