@@ -6,6 +6,8 @@ The track must teach how each selected technology behaves, where its guarantees 
 
 Keep the five-part issue format: Goal, Context, Task, Acceptance Criteria and Hint. Introduce one relevant nuance in Context, define unfamiliar terms, and make its effect observable in the implementation. Give a concept to search for, not a complete solution. Add a deeper variation as a later issue when its prerequisites exist.
 
+Depth is practiced through code: reproduce the edge case, change the implementation, and rerun a specific input. Keep daily acceptance criteria concrete and avoid definition questions or vague understanding checks. Deeper architecture explanations still belong in milestone and interview reviews.
+
 For example, the Decimal issue can ask the learner to compare constructing a value from decimal text with constructing it from a floating-point number. Transaction work can later distinguish a successful SQL statement from a committed transaction. Neither example requires adding an architecture report to a beginner task.
 
 Use this progression for each technology:
