@@ -6,19 +6,19 @@ Python is a primary learning track from the first session through the final prac
 
 ## Coaching contract
 
-Each session follows **explain → demonstrate → predict → guided practice → independent variation → feedback**.
+Each session follows **brief demonstration → run → change → fix → apply**. Spend roughly 5–10 minutes introducing the concept and most of the session writing or debugging code. The learner does not submit written theory answers.
 
-The coach first checks prerequisites, explains one concept in plain language and uses a small example unrelated to the full assignment. The learner predicts what will happen before running it. The coach responds to the actual misconception with a smaller example or hint, then withdraws help for a new variation. Teach useful SQL/PLSQL comparisons while explicitly identifying differences rather than assuming the languages behave alike.
+The coach checks prerequisites and demonstrates one small example before assigning a change. If the learner is stuck, offer a smaller example or hint, then let them run the variation. Discuss a misconception at the point where it affects the code. SQL/PLSQL comparisons are useful when they clarify the current task, not as extra material to memorize.
 
-Day 1 is a coached reading and discussion session: no application code, installation, database, tests or documentation is required to start. After that, introduce code only after the relevant concept has been explained. Small demonstrations are allowed; giving away the full exercise solution is not.
+Day 1 starts with a coached demonstration, then the learner changes and runs a tiny calculation in the interpreter. The coach helps with opening the interpreter; prior coding, independent setup, a project script, tests and documentation are not prerequisites. Small demonstrations are allowed; giving away the full exercise solution is not.
 
-Completion requires understanding plus the issue's observable behavior, not copying code. If the learner is confused, repeat that concept before progressing. Day numbers indicate order, not a deadline to rush. The 30-day foundation can take longer within the 15–20 hour weekly budget. Advanced Python mastery is the longer track, not a 30-day claim.
+Completion is demonstrated by the issue's runnable results and a changed-input or debugging case. A copied example alone does not pass. If the learner is confused, use another small coding variation before progressing. Day numbers indicate order, not a deadline to rush. The 30-day foundation can take longer within the 15–20 hour weekly budget. Advanced Python mastery is the longer track, not a 30-day claim.
 
 ## First session: what Python does
 
 A Python program is a sequence of instructions. The interpreter is the program that executes them. A value is data, such as the number `3` or the text `"USD"`. A name lets the program refer to a value. An expression computes a result from values.
 
-Read this example with the coach; do not write or run code yet:
+Watch the coach run this example, then change it yourself:
 
 ```python
 quantity = 3
@@ -28,9 +28,9 @@ total = quantity * price
 
 The first line makes the name `quantity` refer to the integer value `3`. The second does the same for `price` and `10`. The third calculates a product and makes `total` refer to the result. Assignment uses `=`; it is not an equality test. In this example, `total` is a computed value, not a spreadsheet formula that will recalculate whenever another name changes.
 
-The coach asks the learner to explain the three lines in their own words and predict the result if the starting quantity were different. Only after that discussion, introduce the difference between a numeric value and text containing digits. Avoid mutability, memory addresses or transaction terminology in this first session; those have later lessons.
+Run the calculation with quantity 3 and price 10 and inspect the result, 30. Change quantity to 5, rerun the multiplication and inspect 50. Finally, try values chosen by the coach. If the result stays unchanged, inspect which statement needs to run again. There is no definitions quiz or written explanation to submit.
 
-The learner finishes by explaining where this small calculation could sit between extracting trade data and saving a result. No deliverable beyond the conversation is needed for this first coaching gate.
+Finish when those calculations run correctly. This is the first working piece of the later trade transformation. Save it in the project script on Day 3; no standalone report is needed.
 
 ## First 30 sessions
 
@@ -38,8 +38,8 @@ The live GitHub issues #1–#30 follow this sequence. Coaching precedes the prac
 
 | Day | Main concept | Small practice after coaching |
 |---|---|---|
-| 01 | Interpreter, values, names and expressions | Read the example and explain it; no coding assignment |
-| 02 | Interactive execution | Predict and evaluate simple expressions with the coach |
+| 01 | Interpreter, values, names and expressions | Run 3 × 10, change quantity to 5, rerun and obtain 50 after coaching |
+| 02 | Interactive execution | Add numbers/text, convert a quantity and correct a bad conversion |
 | 03 | Script execution and project environment | Run a tiny greeting script in a virtual environment |
 | 04 | Types and explicit conversion | Convert a quantity from text and observe invalid conversion |
 | 05 | Strings | Normalize and format a fictional trade identifier |
@@ -60,14 +60,14 @@ The live GitHub issues #1–#30 follow this sequence. Coaching precedes the prac
 | 20 | JSON records | Decode one synthetic trade line before processing it |
 | 21 | Generators | Yield records incrementally instead of retaining the file |
 | 22 | Dataclasses and their field contracts | Model a validated trade while preserving runtime checks |
-| 23 | Closures and late binding | Build distinct validation callbacks and explain capture timing |
+| 23 | Closures and late binding | Repair two callbacks so quantity 7 fails limit 5 and passes limit 10 |
 | 24 | Automated tests | Protect a calculation and rejection behavior |
 | 25 | Parameterized tests | Cover multiple meaningful boundary cases |
 | 26 | Composing functions | Connect reading, validation and calculation in a local transformation |
 | 27 | Command-line arguments | Select the input path without changing code |
 | 28 | Logging | Show useful progress and errors without full payloads |
 | 29 | Small local ETL increment | Save valid transformed records to a separate output file |
-| 30 | Independent foundation check | Explain, modify and debug the small program with a fresh variation |
+| 30 | Independent foundation check | Implement a fresh rule, repair a defect and keep the ETL command/tests working |
 
 ## What the project gains in the first month
 
@@ -101,7 +101,7 @@ For each stage, retain at least one observed nuance, a failed approach, an indep
 
 ## Interview connection
 
-Pair learning with short explanations and unfamiliar variations from the start. Later use the [interview track](ETL-AND-INTERVIEW-TRACK.md) for timed tasks and independent mocks. Python interview readiness includes reasoning about state, complexity, edge cases, errors, resources and trade-offs, alongside working code. Remembering syntax or rehearsing one loader is not enough.
+Pair learning with unfamiliar coding variations from the start. Discuss reasoning briefly while inspecting real code; do not make daily completion depend on reciting definitions. Later use the [interview track](ETL-AND-INTERVIEW-TRACK.md) for timed tasks and independent mocks, including the verbal design skills needed in interviews. Remembering syntax or rehearsing one loader is not enough.
 
 ## Authoritative study references
 

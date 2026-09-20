@@ -8,9 +8,9 @@ Use precise language: **assignment binds or rebinds a name; mutation changes an 
 
 Global names belong to a module, not one universal namespace shared by all modules. `global` directs rebinding to that module; `nonlocal` refers to an existing binding in an enclosing function. Reading an outer binding is different from assigning to it. Coach the distinction before recommending either declaration. Prefer explicit arguments and returned results for ordinary pipeline helpers. See the [global and nonlocal statement reference](https://docs.python.org/3/reference/simple_stmts.html#the-global-statement).
 
-## Predict before running
+## Run, change and fix
 
-The coach reveals results only after the learner predicts and explains them. When a prediction is wrong, shrink the example and rerun it before continuing.
+The coach gives a short demonstration, then the learner runs each probe and changes it. Brief discussion helps locate the bug; written theory answers are not required. Finish each probe with a concrete working variation.
 
 ### Probe A — reading before a local assignment
 
@@ -22,7 +22,7 @@ def inspect_limit():
     limit = 9
 ```
 
-Predict what happens when called. Identify which name the function considers local and when it first receives a value. Repair the function by passing needed data explicitly. Then compare with a deliberately global variant in a scratch exercise, explaining the shared-state consequence rather than adopting globals as the default fix.
+Call the function and reproduce UnboundLocalError. Repair it using an explicit parameter, then run it with limits 5 and 10 and check that it uses each supplied value without changing the module's limit. Run a deliberately global variant with the coach to observe the different state change; keep explicit inputs in the project helper.
 
 ### Probe B — mutation versus rebinding
 
@@ -33,7 +33,7 @@ alias.append("B")
 alias = ["C"]
 ```
 
-Draw which names refer to which lists after each line. Explain why changing a list and rebinding a name are different operations. Repeat with a helper that receives the list as an argument. Assignment itself is not a copy-on-write mechanism. Study dataframe copy-on-write behavior separately for the selected library/version.
+Run the example: events must contain A and B, while alias contains only C. Change it so a helper receives the list and appends an item, then inspect the caller's list. Assignment itself is not a copy-on-write mechanism. Study dataframe copy-on-write behavior separately for the selected library/version.
 
 ### Probe C — when a closure reads a value
 
@@ -45,15 +45,15 @@ def build_rules():
     return rules
 ```
 
-Predict the result of calling both returned rules with quantity 7 after construction has finished. Investigate a function factory and a definition-time default as alternative fixes; explain what each captures. Do not assume the issue is unique to lambda syntax. The [Python programming FAQ](https://docs.python.org/3/faq/programming.html#why-do-lambdas-defined-in-a-loop-with-different-values-all-return-the-same-result) explains this behavior.
+Run both returned rules with quantity 7 after construction: observe that both accept it. Repair the capture so the limit-5 rule rejects 7 and the limit-10 rule accepts it. Also try 3 and 12, which must be accepted by both and rejected by both respectively. Explore a function factory or definition-time default with a hint rather than a complete supplied fix. The [Python programming FAQ](https://docs.python.org/3/faq/programming.html#why-do-lambdas-defined-in-a-loop-with-different-values-all-return-the-same-result) explains this behavior.
 
 ### Probe D — state in an enclosing function
 
-Have the coach supply a tiny counter factory. Compare reading its enclosing count, rebinding it without a declaration, and deliberately rebinding with `nonlocal`. Explain which state survives between calls and verify that two factory-created counters are independent. Then compare returning a new count to maintaining hidden state.
+Have the coach supply a tiny counter factory. Run a version that fails to update its enclosing count, then repair it with deliberate `nonlocal` rebinding. One counter must return 1 then 2; a separately created counter must begin at 1. Try an explicit input/return version as a second small variation.
 
 ### Probe E — defaults are evaluated once per definition
 
-Compare two calls to a helper with a mutable default list. Explain why results may depend on previous calls. Choose an explicit per-call initialization strategy. Also examine a default used to capture a mutable configuration object: capturing the reference is not an immutable snapshot of its contents. See the [FAQ on shared default values](https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects).
+Call a helper with a mutable default list twice, adding T1 then T2. Reproduce the unintended accumulated result, then repair initialization: the first default call must return only T1 and the second only T2. Try a captured mutable configuration object separately and observe the effect of changing its contents. See the [FAQ on shared default values](https://docs.python.org/3/faq/programming.html#why-are-default-values-shared-between-objects).
 
 ## Project and interview checks
 
@@ -63,4 +63,4 @@ Compare two calls to a helper with a mutable default list. Explain why results m
 - Day 30: the coach changes a scope or captured value; the learner predicts, diagnoses and repairs the behavior independently.
 - Later: repeat the exercise for retry callbacks, task scheduling and decorators, where execution can occur after surrounding state changes.
 
-Explain the binding and its timing before proposing a fix. Passing a memorized “lambda in a loop” question is insufficient if an unfamiliar nested-function variation still fails. Keep version-specific annotation and class-scope behavior for the advanced runtime phase; ordinary LEGB reasoning is a starting model, not every special scope rule.
+Use the failed and repaired runs to discuss which binding changed. Daily completion depends on working variations rather than reciting scope rules. Keep version-specific annotation and class-scope behavior for the advanced runtime phase; ordinary LEGB reasoning is a starting model, not every special scope rule.

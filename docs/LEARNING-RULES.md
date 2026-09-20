@@ -1,6 +1,6 @@
 # Learning project rules
 
-Recorded from the user's cumulative requests on September 19, 2026. These are project requirements; later requests add to them unless explicitly cancelled or replaced.
+Recorded from the user's cumulative requests; updated September 20, 2026. These are project requirements; later requests add to them unless explicitly cancelled or replaced.
 
 ## Purpose and working agreement
 
@@ -12,6 +12,7 @@ Recorded from the user's cumulative requests on September 19, 2026. These are pr
 6. Maintain 30 sequential daily learning issues, reusing the original 10 for Days 1–10. Day numbers express learning order; respect the existing 15–20 hours/week and carry unfinished work forward.
 7. The first 30 days target working, intermediate Python through useful project progress. Teach first, then guide practice, then ask for independent code. Day 1 starts with Python coaching and no coding prerequisite.
 8. Continue advanced/master-level Python during the rest of the project, with independent practical gates. Explicitly teach binding/rebinding, local/global/nonlocal scope, mutation versus rebinding, default-argument timing and late binding in the first-month sequence.
+9. Keep coaching short and make learning primarily programming-based. Run an example, change it, break or debug it, then apply the concept. No written theory answers or definition quizzes are required for daily completion.
 
 ## Required issue pattern
 
@@ -37,7 +38,7 @@ State the boundary and what belongs in a later increment.
 Search for <general concept>. Notice <one or two useful ideas>.
 ```
 
-- One main concept and one concrete implementation task per issue, with prerequisites in Context when needed. Day 1 is the explicit coaching exception: use explanation and prediction before code is assigned.
+- One main concept and one concrete programming task per issue, with prerequisites in Context when needed. Day 1 begins with coaching, then a guided interpreter calculation; it requires no prior coding or independent application implementation.
 - Give an exact project location or component, understandable language and behavioral completion criteria.
 - Introduce a relevant technology nuance without expanding the issue into several topics.
 - Use searchable hints. Do not supply the full implementation, exact solution steps, long lectures or unexplained framework behavior.
@@ -45,6 +46,8 @@ Search for <general concept>. Notice <one or two useful ideas>.
 - Do not require new tests, reports or docs on every beginner issue. Retain dedicated testing/documentation increments and milestone evidence.
 - Progress from a runnable program and small boundaries to validation, configuration, errors, separation of responsibilities, storage, integrations, testing, deployment and operation.
 - Keep existing issue numbers and completed evidence; do not silently replace work the learner has already completed.
+- Keep descriptions short. Replace vague criteria such as identifying future inputs/outputs or showing understanding with a named action and visible result: for example, quantity 3 and price 10 produce 30, then quantity 5 produces 50.
+- Use roughly 5–10 minutes for the initial demonstration, then devote most of the session to coding and debugging within the weekly budget. Questions support practice; they are not a separate theory assignment.
 
 ## Depth, ETL and production
 
@@ -90,5 +93,7 @@ Search for <general concept>. Notice <one or two useful ideas>.
 | Teach late binding and binding/global nuances | Dedicated binding/scope lab and Days 12, 13 and 23; applied assessment on Day 30 |
 | Push the accumulated changes when done | Update the existing feature branch and PR after verification; master merge remains with the owner |
 | Remove tool identifiers | Neutral branch and metadata naming; learning issue links use merged documentation on master |
+| Simplify lessons and increase programming practice | Brief coaching followed by running, changing and fixing code; concrete pass conditions across all 30 issues |
+| Replace vague Day 1 input/output criterion | Coached calculations with specific inputs and observable numeric results |
 
 When adding a new request, update this ledger and any affected issue, roadmap or acceptance gate. A documentation update records the requirement; it does not complete the associated learning or software implementation.

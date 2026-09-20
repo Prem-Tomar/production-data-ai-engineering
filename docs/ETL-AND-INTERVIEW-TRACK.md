@@ -29,7 +29,7 @@ Required completion evidence: known-input outputs, repeat/replay correctness, in
 
 ## Interview practice without replacing learning
 
-During the first month, finish each implementation with a short spoken explanation: what changed, why it works, one failure it handles and one limitation. Revisit a previously completed concept with a small unseen variation during the weekly review. This requires no extra document or automated test on every issue.
+During the first month, spend most practice time writing and debugging the project. Finish each increment by running a changed-input or failure case with a concrete expected result. Use brief spoken discussion only to resolve what the code revealed; no theory answers are required. Revisit a completed concept through an unseen coding variation during the weekly review. This requires no extra document or automated test on every issue.
 
 From month 4, use two sessions within the 15–20 weekly hours: one timed coding/SQL exercise and one design/debugging or behavioral mock. Reduce other planned work by the same time. The durations below are practice targets chosen for this track, not claimed employer interview formats.
 
