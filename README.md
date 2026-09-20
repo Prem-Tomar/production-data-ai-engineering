@@ -43,6 +43,8 @@ Read the short explanation, then **run, change and fix code**. Daily completion 
 
 The [versioned task descriptions](docs/PYTHON-DAILY-TASKS.md) contain all 30 tasks and their starter examples for review alongside the study notes.
 
+The queue continues beyond Day 30: **review and close N learning issues, add N new issues and N matching explanations with runnable examples**. Each new issue links to its published explanation. This happens within the review-and-close workflow, without a scheduled job. The [rolling queue procedure](docs/LEARNING-QUEUE.md) records replacements so retries and reopened issues do not generate duplicates. The initial 30 issues remain the foundation sequence.
+
 The first-month target is **working, intermediate Python demonstrated through a useful local ETL tool**: streamed JSONL input, validation, exact decimal calculations, timezone handling, reusable functions/modules, a small typed data model, file output, tests and debugging. Name binding, local/global/nonlocal scope, mutation, default arguments and closure late binding are explicit coaching topics. Advanced Python continues throughout project development toward the final independent practical defense.
 
 The earlier database, replay, HTTP and CI assignments are preserved in the [pipeline backlog](docs/PIPELINE-BACKLOG.md) for the next stage. No project requirement has been dropped. Use the 15–20 hour weekly budget; assess the 30-day target through working behavior and an unfamiliar variation rather than awarding proficiency from the calendar alone.
