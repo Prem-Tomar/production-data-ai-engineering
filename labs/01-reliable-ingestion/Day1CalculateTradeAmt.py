@@ -7,6 +7,6 @@ price = 10
 result = quantity * price
 print(result)
 quantity = 2
-prince = 7
+price = 7
 result = quantity * price
 print(result)
