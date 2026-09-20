@@ -37,9 +37,11 @@ The final platform must be **production-deployable**, with a repeatable build, e
 
 ## First 30 learning days
 
-Start with [Python coaching: foundations to expert practice](docs/PYTHON-COACHING.md), then follow the [daily GitHub issues](https://github.com/Prem-Tomar/production-data-ai-engineering/issues?q=is%3Aissue%20%22Day%22%20sort%3Acreated-asc) in order, beginning with [Day 01](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/1). Day 1 teaches how Python works before asking for code. Every later issue uses explanation, demonstration, prediction, guided practice and independent application.
+Start with [Python: foundations to expert practice](docs/PYTHON-COACHING.md), including explanations and runnable examples for the first ten tasks. Follow the [daily GitHub issues](https://github.com/Prem-Tomar/production-data-ai-engineering/issues?q=is%3Aissue%20%22Day%22%20sort%3Acreated-asc) in the recommended order, beginning with [Day 01](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/1). Each task is self-contained, with its own inputs, setup and any necessary starter code. It does not depend on another task's completion or another person's availability.
 
-Keep the coaching brief, then **run, change and fix code**. Day 1 moves from a demonstration to changing a calculation in the interpreter. Daily completion uses specific inputs, outputs or reproduced failures; no written theory answers are required. For example, quantity 3 and price 10 must produce 30, then changing quantity to 5 must produce 50.
+Read the short explanation, then **run, change and fix code**. Daily completion uses specific inputs, outputs or reproduced failures; no written theory answers are required. Day 1 specifies all three calculations: quantity/price pairs (3, 10), (5, 10) and (2, 7) must produce 30, 50 and 14.
+
+The [versioned task descriptions](docs/PYTHON-DAILY-TASKS.md) contain all 30 tasks and their starter examples for review alongside the study notes.
 
 The first-month target is **working, intermediate Python demonstrated through a useful local ETL tool**: streamed JSONL input, validation, exact decimal calculations, timezone handling, reusable functions/modules, a small typed data model, file output, tests and debugging. Name binding, local/global/nonlocal scope, mutation, default arguments and closure late binding are explicit coaching topics. Advanced Python continues throughout project development toward the final independent practical defense.
 
