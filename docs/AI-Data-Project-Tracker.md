@@ -8,6 +8,8 @@ Companion to `AI-Data-Architecture-Roadmap.md`. Planning horizon: 24 months at t
 |---|---|---|
 | [Day 01 / issue #1](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/1) | September 24, 2026 | [PR #36 review](https://github.com/Prem-Tomar/production-data-ai-engineering/pull/36#pullrequestreview-5298537883), commit `2f7a532`: fresh Python run printed 30, 50 and 14 and exited successfully. The naming defect is fixed, the issue is closed and PR #36 is merged into master. |
 
+[Day 31 / issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38) replenishes the queue and is assigned only to Sujeet (`chouhansujeet20-ctrl`). Its [explanation and example](PYTHON-COACHING.md#day-31-equality-and-identity) are published; the exercise remains planned.
+
 This evidence covers the introductory calculation only. The ETL deliverable, intermediate Python gate and production milestones remain unfulfilled. Replenishment is tracked in [the queue ledger](learning-queue.json).
 
 ## Setup decisions

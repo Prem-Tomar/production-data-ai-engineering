@@ -226,7 +226,7 @@ New tasks extend the queue as reviewed issues close. Their day numbers indicate 
 
 | Day | Explanation | Task |
 |---|---|---|
-| 31 | [Equality and identity](#day-31-equality-and-identity) | [Compare trade records](PYTHON-DAILY-TASKS.md#day-31-compare-trade-records-by-value) |
+| 31 | [Equality and identity](#day-31-equality-and-identity) | [Issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38) / [task text](PYTHON-DAILY-TASKS.md#day-31-compare-trade-records-by-value) |
 
 ## Day 31: equality and identity
 

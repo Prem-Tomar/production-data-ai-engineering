@@ -1069,6 +1069,8 @@ Search for "pytest raises tmp_path regression test Python set membership".
 
 ## Day 31: Compare trade records by value
 
+[GitHub issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38)
+
 ### Goal
 
 Distinguish a repeated trade record from a conflicting version of the same trade.
