@@ -1,6 +1,14 @@
 # Sujeet Chouhan — Python and Financial AI Data Platform Tracker
 
-Companion to `AI-Data-Architecture-Roadmap.md`. Planning horizon: 24 months at the user-confirmed 15–20 hours/week, with earlier job-readiness gates. All work below is planned, not completed. Replace relative months with dates after choosing a start date. See `Sujeet-Market-and-Job-Strategy.md` for the current role comparison.
+Companion to `AI-Data-Architecture-Roadmap.md`. Planning horizon: 24 months at the user-confirmed 15–20 hours/week, with earlier job-readiness gates. Work is planned unless supported by the evidence recorded below. Replace relative months with dates after choosing a start date. See `Sujeet-Market-and-Job-Strategy.md` for the current role comparison.
+
+## Reviewed learning tasks
+
+| Task | Review date | Evidence and outcome |
+|---|---|---|
+| [Day 01 / issue #1](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/1) | September 24, 2026 | [PR #36 review](https://github.com/Prem-Tomar/production-data-ai-engineering/pull/36#pullrequestreview-5298537883), commit `2f7a532`: fresh Python run printed 30, 50 and 14 and exited successfully. The naming defect is fixed, the issue is closed and PR #36 is merged into master. |
+
+This evidence covers the introductory calculation only. The ETL deliverable, intermediate Python gate and production milestones remain unfulfilled. Replenishment is tracked in [the queue ledger](learning-queue.json).
 
 ## Setup decisions
 
@@ -23,7 +31,7 @@ Technology depth and production deployability are required outcomes. Use the [de
 
 | Cross-cutting outcome | Current status | Evidence |
 |---|---|---|
-| First 30 days: coached working/intermediate Python and useful local ETL tool | Planned; independently assessed on Day 30, not awarded by elapsed time | [Python coaching and gates](PYTHON-COACHING.md) |
+| First 30 days: coached working/intermediate Python and useful local ETL tool | In progress: Day 1 reviewed; local ETL and independent Day 30 assessment remain pending | [Python coaching and gates](PYTHON-COACHING.md) and reviewed-task evidence above |
 | Advanced Python during platform implementation through expert defense | Planned | [Master-level syllabus](PYTHON-COACHING.md) |
 | Technology-specific edge cases, limits and independent variations | Planned; record per technology in milestone evidence | None yet |
 | Repeatable staging deployment with versioned artifacts and infrastructure | Not implemented | None yet |

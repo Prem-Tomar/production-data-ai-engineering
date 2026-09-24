@@ -220,6 +220,38 @@ Intermediate readiness means the learner can independently use and explain colle
 
 After the check, continue through [the preserved pipeline backlog](PIPELINE-BACKLOG.md), reusing completed work. PostgreSQL, transactional replay, HTTP integration, CI and cloud deployment remain required later increments. An unresolved foundation topic receives targeted coaching while unrelated safe work can continue.
 
+## Continuing Python tasks
+
+New tasks extend the queue as reviewed issues close. Their day numbers indicate study order, not prerequisites; each task includes its own setup and inputs. Adding a task here does not mean the first-month foundation gate has been passed.
+
+| Day | Explanation | Task |
+|---|---|---|
+| 31 | [Equality and identity](#day-31-equality-and-identity) | [Compare trade records](PYTHON-DAILY-TASKS.md#day-31-compare-trade-records-by-value) |
+
+## Day 31: equality and identity
+
+Equality asks whether values compare equal. Identity asks whether two names refer to the very same object. For dictionaries containing these simple field values, `==` compares keys and their values, while `is` checks identity. Equal contents do not require the same object or the same key insertion order.
+
+```python
+first = {"trade_id": "T9", "quantity": 3}
+same_values = {"quantity": 3, "trade_id": "T9"}
+alias = first
+
+print(first == same_values)
+print(first is same_values)
+print(first is alias)
+
+same_values["quantity"] = 4
+print(first == same_values)
+print(first["quantity"])
+```
+
+The output is `True`, `False`, `True`, `False`, `3`, on separate lines. The two dictionary expressions created separate objects. Assigning `alias = first` instead created another name for the original object; it did not copy that dictionary. Changing the separate `same_values` dictionary leaves `first` unchanged. Changing a field through `alias` would affect `first` because both names refer to one dictionary.
+
+A repeated trade read from a file can arrive as a new dictionary with unchanged contents. Testing identity alone would incorrectly treat it as different data. For this exercise, compare the supplied trade IDs and field values to distinguish a new trade, an unchanged replay and a conflicting version. Inspect equality and identity separately when the starter gives an unexpected classification.
+
+Keep the scope to the supplied fields and types. Dictionary equality is not financial-data validation: it does not normalize currency labels, convert text quantities or decide which fields define a real business duplicate. Those policies must be specified before using this idea in the production replay pipeline. Avoid using string or small-integer identity experiments to infer value equality; implementation reuse can make those observations misleading.
+
 ## Master-level Python syllabus and gates
 
 The target is expert applied Python engineering: independently design, maintain, debug, optimize and teach substantial software. The periods below align with the existing 24-month roadmap and may move when prerequisites need more time. Passing a gate needs demonstrated work; no proficiency score is assigned in advance.

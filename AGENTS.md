@@ -3,6 +3,7 @@
 Read [the learning rules](docs/LEARNING-RULES.md) before changing curriculum, issues or project implementation. They record the user's cumulative requirements.
 
 - Requests are additive. Keep an explicit request ledger and finish earlier queued work unless the user cancels or replaces it.
+- Assign every new repository issue only to Sujeet (`chouhansujeet20-ctrl`). Verify the assignee after publication.
 - As part of reviewing and closing learning issues, replenish the queue one-for-one: each newly closed learning issue requires one new self-contained issue and one matching explanation with a runnable example. Follow docs/LEARNING-QUEUE.md and its replacement ledger; never duplicate a replacement on retries or reclosure. Publish explanations before linking them from new issues. Do not schedule a monitor, cron job or recurring check for this rule.
 - Teach through focused implementation issues using Goal, Context, Task, Acceptance Criteria and Hint. Define unfamiliar terms; provide searchable hints, not complete solutions.
 - Preserve the 30-day issue sequence. It now starts with Python coaching and targets working intermediate Python through a local ETL tool. Preserve the earlier pipeline work in docs/PIPELINE-BACKLOG.md; do not discard it or claim it is complete.
@@ -15,5 +16,5 @@ Read [the learning rules](docs/LEARNING-RULES.md) before changing curriculum, is
 - Ground market-driven additions in dated employer postings. Separate required, preferred and role-specific skills, and distinguish learning evidence from professional experience.
 - Keep the beginner Python/cloud baseline and 15–20 hour weekly budget. Do not require tests/docs on every early issue; schedule them explicitly and retain milestone/release evidence gates.
 - Use synthetic or explicitly permitted data. Never claim implementation, production readiness or interview proficiency based only on a plan.
-- Follow CONTRIBUTING.md: use a feature branch and pull request; master pushes and merges remain with @Prem-Tomar. Keep PR scope and description current when requests accumulate.
+- Follow CONTRIBUTING.md for implementation reviews. The owner authorizes publishing completed review, issue-closure and progress updates to master, including merging reviewed changes that pass their acceptance checks. Publish these updates in the same workflow; do not leave them only on a feature branch. Keep failed or unreviewed implementation PRs open. Retain the owner-only repository protection and never force-push master.
 - Use neutral project terminology in branch names, issue links, commit messages and pull requests. Do not add assistant/tool branding or attribution trailers. Link learning issues to merged documentation on master or an appropriate stable revision.

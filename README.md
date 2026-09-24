@@ -41,9 +41,11 @@ Start with [Python: foundations to expert practice](docs/PYTHON-COACHING.md), in
 
 Read the short explanation, then **run, change and fix code**. Daily completion uses specific inputs, outputs or reproduced failures; no written theory answers are required. Day 1 specifies all three calculations: quantity/price pairs (3, 10), (5, 10) and (2, 7) must produce 30, 50 and 14.
 
-The [versioned task descriptions](docs/PYTHON-DAILY-TASKS.md) contain all 30 tasks and their starter examples for review alongside the study notes.
+The [versioned task descriptions](docs/PYTHON-DAILY-TASKS.md) contain the initial 30 tasks and continuing Python tasks, with starter examples alongside the study notes.
 
 The queue continues beyond Day 30: **review and close N learning issues, add N new issues and N matching explanations with runnable examples**. Each new issue links to its published explanation. This happens within the review-and-close workflow, without a scheduled job. The [rolling queue procedure](docs/LEARNING-QUEUE.md) records replacements so retries and reopened issues do not generate duplicates. The initial 30 issues remain the foundation sequence.
+
+All new issues are assigned only to Sujeet (`chouhansujeet20-ctrl`). Completed review, closure and progress updates are published to master in the same workflow, including implementation PRs that pass review and their acceptance checks.
 
 The first-month target is **working, intermediate Python demonstrated through a useful local ETL tool**: streamed JSONL input, validation, exact decimal calculations, timezone handling, reusable functions/modules, a small typed data model, file output, tests and debugging. Name binding, local/global/nonlocal scope, mutation, default arguments and closure late binding are explicit coaching topics. Advanced Python continues throughout project development toward the final independent practical defense.
 

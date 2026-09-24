@@ -1,6 +1,6 @@
 # Learning project rules
 
-Recorded from the user's cumulative requests; updated September 20, 2026. These are project requirements; later requests add to them unless explicitly cancelled or replaced.
+Recorded from the user's cumulative requests; updated September 24, 2026. These are project requirements; later requests add to them unless explicitly cancelled or replaced.
 
 ## Purpose and working agreement
 
@@ -14,6 +14,7 @@ Recorded from the user's cumulative requests; updated September 20, 2026. These 
 8. Continue advanced/master-level Python during the rest of the project, with independent practical gates. Explicitly teach binding/rebinding, local/global/nonlocal scope, mutation versus rebinding, default-argument timing and late binding in the first-month sequence.
 9. Keep coaching short and make learning primarily programming-based. Run an example, change it, break or debug it, then apply the concept. No written theory answers or definition quizzes are required for daily completion.
 10. As part of the review-and-close workflow, keep a rolling learning queue: for N newly closed learning issues, publish N new self-contained issues and N matching explanations with runnable examples. Begin after Day 30 and continue the roadmap. Track each replacement once using [the queue procedure](LEARNING-QUEUE.md); retrying or closing a reopened issue must not generate another replacement. Review and closure trigger this work; do not create a scheduled monitor or cron job.
+11. Assign all newly created repository issues only to Sujeet (`chouhansujeet20-ctrl`); verify the actual assignee after publication.
 
 ## Required issue pattern
 
@@ -86,7 +87,7 @@ For the Day 1 naming error, the relevant concepts are exact name matching, assig
 
 ## Publishing and verification
 
-- Push authorized project updates on a feature branch and keep the pull request reviewable. Only @Prem-Tomar updates or merges master under the repository policy.
+- Publish completed review, closure and progress updates to master in the same workflow under the owner's standing authorization. Merge reviewed implementation PRs only when their acceptance checks pass; verified curriculum and progress documentation may be pushed directly through owner access. Do not leave finished updates only on a feature branch. Keep failed or unreviewed implementation changes in PRs, preserve owner-only protection and never force-push master.
 - Use neutral topic-based branch names and project terminology in issues, commit messages and pull requests. Do not include assistant/tool branding or attribution trailers. Prefer master or a stable revision for documentation links after merging.
 - Verify issue publication, local links, document consistency and relevant code behavior. Report actual checks, not anticipated results.
 - Use planned, implementing, evidence-ready, reviewed and complete accurately. Preserve unresolved requirements in the tracker.
@@ -119,5 +120,7 @@ For the Day 1 naming error, the relevant concepts are exact name matching, assig
 | Replace closed issues and add the same number of explanations | One replacement issue and one published explanation per newly closed learning issue; rolling queue procedure and persistent replacement ledger prevent duplicates |
 | Trigger replenishment during review and closure; no cron | Perform replacement work in the same review-and-close workflow, without scheduling or background polling |
 | Use review comments to drive learning | Inline and overall reviews explain behavior, reasoning and nuances; provide concrete investigation steps and expected results, with optional practice kept separate from task acceptance |
+| Assign all new issues to Sujeet only | Sole assignee `chouhansujeet20-ctrl`; verify assignment on every newly created repository issue |
+| Publish review, closure and progress updates to main/master | Publish to this repository's master in the same workflow, including reviewed passing PRs and verified documentation; this supersedes the earlier requirement to leave those updates awaiting an owner merge |
 
 When adding a new request, update this ledger and any affected issue, roadmap or acceptance gate. A documentation update records the requirement; it does not complete the associated learning or software implementation.

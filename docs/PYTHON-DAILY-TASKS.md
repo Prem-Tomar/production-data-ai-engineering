@@ -1,6 +1,6 @@
 # Daily Python tasks
 
-These are the versioned descriptions for GitHub issues #1–#30. Each task supplies its own inputs, setup and any required starter code. Day order guides study; completion of another issue or availability of another person is not required. Use an installed Python 3 interpreter and run commands from the repository root. Create folders named by a task if they do not exist.
+These are the versioned descriptions for the initial GitHub issues #1–#30 and continuing Python tasks added through the rolling queue. Each task supplies its own inputs, setup and any required starter code. Day order guides study; completion of another issue or availability of another person is not required. Use an installed Python 3 interpreter and run commands from the repository root. Create folders named by a task if they do not exist.
 
 The [Python study notes](PYTHON-COACHING.md) contain explanations and runnable examples for Days 1–10. The later tasks share trade-processing concepts and provide components to assess and integrate into the project. These descriptions and starter examples are learning material, not completed project implementation.
 
@@ -1066,3 +1066,50 @@ Install pytest with `python -m pip install pytest`; run `python -m pytest tests/
 ### Hint
 
 Search for "pytest raises tmp_path regression test Python set membership".
+
+## Day 31: Compare trade records by value
+
+### Goal
+
+Distinguish a repeated trade record from a conflicting version of the same trade.
+
+### Context
+
+`==` compares dictionary contents; `is` checks whether two names refer to the same object. Separately created records can contain equal data. A replay is another arrival with the same ID and values; a conflict has the same ID but different values.
+
+Read the [explanation and example](PYTHON-COACHING.md#day-31-equality-and-identity).
+
+### Task
+
+Create `src/trade_ingestion/day31.py` and any missing folders. Start with this code:
+
+```python
+def classify_trade(existing, incoming):
+    if existing is incoming:
+        return "replay"
+    return "conflict"
+
+original = {"trade_id": "T1", "quantity": 3, "price": 10, "currency": "USD"}
+repeated = {"currency": "USD", "price": 10, "quantity": 3, "trade_id": "T1"}
+changed = {"trade_id": "T1", "quantity": 4, "price": 10, "currency": "USD"}
+different = {"trade_id": "T2", "quantity": 3, "price": 10, "currency": "USD"}
+alias = original
+
+print(classify_trade(original, repeated))
+print(classify_trade(original, changed))
+print(classify_trade(original, different))
+print(classify_trade(original, alias))
+```
+
+Run it with `python src/trade_ingestion/day31.py` from the repository root. Fix the function to return `"new"` for a different trade ID, `"replay"` for equal records sharing an ID, and `"conflict"` for unequal records sharing an ID. Leave both inputs unchanged. Use the four-field dictionaries provided; input validation, storage and database replay handling are outside this exercise.
+
+### Acceptance Criteria
+
+- [ ] The supplied starter prints conflict, conflict, conflict, replay; the repaired script prints replay, conflict, new, replay.
+- [ ] A separately constructed equal dictionary is classified as replay even when its keys were inserted in a different order.
+- [ ] Calling the function does not change any input dictionary; original still contains T1, quantity 3, price 10 and USD.
+- [ ] Running the repaired script in a fresh process produces the same four results.
+
+### Hint
+
+Search for "Python dictionary equality identity is vs equals". Check the values and IDs you are comparing, not only whether the two names refer to one object.

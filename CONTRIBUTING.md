@@ -4,6 +4,8 @@
 
 Only @Prem-Tomar may push to or merge into `master`. Developers can fork this public repository, create a feature branch in their fork and open a pull request targeting `master`; the owner reviews and performs the merge. Invited collaborators can also use feature branches in this repository.
 
+The owner's standing instruction is to publish completed reviews, issue closures and progress records to `master` within the same workflow. This authorizes merging reviewed implementation PRs that pass their acceptance checks and directly publishing verified curriculum/progress documentation through the owner's access. Failed or unreviewed implementation changes remain in their PRs. Preserve the owner-only protection and do not force-push.
+
 **Enforcement status:** The repository is public at the owner's request. GitHub ruleset `master-owner-only` is active. No collaborator, team, application or deploy key was added to its bypass list.
 
 ## Server-side rule
@@ -24,7 +26,9 @@ Use neutral topic-based branch names such as `docs/learning-conventions` or `fea
 
 Keep PRs small enough to review. Use synthetic data and example configuration without credentials. Do not commit raw resumes, real banking data, cloud credentials or machine-local state.
 
-For code changes, demonstrate understanding by explaining the design and handling a reviewer-requested variation. Leave merge and master updates to the owner.
+For code changes, demonstrate understanding by explaining the design and handling a reviewer-requested variation. After passing review, apply the owner-authorized publication workflow above.
+
+Assign every new repository issue solely to Sujeet (`chouhansujeet20-ctrl`) and verify the assignment after creating it.
 
 ## Reviewing learning work
 
