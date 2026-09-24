@@ -25,3 +25,7 @@ Use neutral topic-based branch names such as `docs/learning-conventions` or `fea
 Keep PRs small enough to review. Use synthetic data and example configuration without credentials. Do not commit raw resumes, real banking data, cloud credentials or machine-local state.
 
 For code changes, demonstrate understanding by explaining the design and handling a reviewer-requested variation. Leave merge and master updates to the owner.
+
+## Reviewing learning work
+
+Follow the [learning review rules](docs/LEARNING-RULES.md#learning-pull-request-reviews). Explain the observed behavior, its cause and a relevant nuance, then provide a concrete way to inspect or reproduce it and the expected result after correction. Inline comments should guide investigation of the changed code; the overall review should connect that work to the concept being learned. Keep optional experiments separate from acceptance criteria and scale feedback to the current lesson.

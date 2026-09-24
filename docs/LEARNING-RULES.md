@@ -54,6 +54,19 @@ Search for <general concept>. Notice <one or two useful ideas>.
 - Every task is self-contained: specify its own inputs, file locations, run commands and any necessary starter code. Do not require previous issues, existing helpers/tests, unspecified examples or another person's chosen variation. Day order is the recommended learning progression, not an execution dependency. Focused trade exercises remain useful components for later project integration.
 - Keep the published issue descriptions synchronized with [PYTHON-DAILY-TASKS.md](PYTHON-DAILY-TASKS.md) so curriculum changes can be reviewed in a pull request.
 
+## Learning pull-request reviews
+
+Review comments should help build reasoning and debugging habits as well as identify defects. Use the actual changed code and the task's acceptance criteria as the starting point.
+
+- State the observed behavior and the expected result, distinguishing executed checks from inferences.
+- Explain why the code produces that behavior. Include a relevant nuance at the current learning level, such as why valid syntax and a successful run can still produce the wrong value.
+- Give a concrete investigation: inspect named values, run a small variation, or trace an expression. Include the expected observation so the author can check the reasoning independently.
+- Guide the correction without replacing the exercise with a complete solution. State which cases to rerun and what they should produce.
+- Put line-specific reasoning and investigation in inline comments. Use the overall review to connect the findings to the concept being learned and summarize verified results without repeating every detail.
+- Keep feedback proportionate to the lesson. Mark supporting experiments as optional; do not add theory questionnaires, unrelated refactoring, or tests/docs that the task does not require.
+
+For the Day 1 naming error, the relevant concepts are exact name matching, assignment binding, an earlier value remaining available, and a computed result not automatically changing when an operand is rebound. The practical check is to inspect the operands and rerun all three specified calculations, rather than only changing a spelling and assuming success.
+
 ## Depth, ETL and production
 
 - Every adopted technology needs coverage of execution behavior, edge cases, failure modes, limitations, performance and alternatives. Use [TECHNOLOGY-DEPTH.md](TECHNOLOGY-DEPTH.md).
@@ -105,5 +118,6 @@ Search for <general concept>. Notice <one or two useful ideas>.
 | No dependencies in any task | All 30 tasks include their own inputs and setup; debugging and extension tasks supply the code they need; no external person chooses an input or unlocks progress |
 | Replace closed issues and add the same number of explanations | One replacement issue and one published explanation per newly closed learning issue; rolling queue procedure and persistent replacement ledger prevent duplicates |
 | Trigger replenishment during review and closure; no cron | Perform replacement work in the same review-and-close workflow, without scheduling or background polling |
+| Use review comments to drive learning | Inline and overall reviews explain behavior, reasoning and nuances; provide concrete investigation steps and expected results, with optional practice kept separate from task acceptance |
 
 When adding a new request, update this ledger and any affected issue, roadmap or acceptance gate. A documentation update records the requirement; it does not complete the associated learning or software implementation.
