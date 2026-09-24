@@ -11,6 +11,8 @@ Companion to `AI-Data-Architecture-Roadmap.md`. Planning horizon: 24 months at t
 
 [Day 31 / issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38) replenishes the queue and is assigned only to Sujeet (`chouhansujeet20-ctrl`). Its [explanation and example](PYTHON-COACHING.md#day-31-equality-and-identity) are published; the exercise remains planned.
 
+[Day 32 / issue #40](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/40) replaces the closed Day 2 issue and is assigned only to Sujeet (`chouhansujeet20-ctrl`). Its [explanation and example](PYTHON-COACHING.md#day-32-copying-nested-records) are published; the exercise remains planned.
+
 This evidence covers the introductory calculations and number/text conversion only. The ETL deliverable, intermediate Python gate and production milestones remain unfulfilled. Replenishment is tracked in [the queue ledger](learning-queue.json).
 
 ## Setup decisions

@@ -227,7 +227,7 @@ New tasks extend the queue as reviewed issues close. Their day numbers indicate 
 | Day | Explanation | Task |
 |---|---|---|
 | 31 | [Equality and identity](#day-31-equality-and-identity) | [Issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38) / [task text](PYTHON-DAILY-TASKS.md#day-31-compare-trade-records-by-value) |
-| 32 | [Copying nested records](#day-32-copying-nested-records) | [Task text](PYTHON-DAILY-TASKS.md#day-32-copy-nested-trade-data-safely) |
+| 32 | [Copying nested records](#day-32-copying-nested-records) | [Issue #40](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/40) / [task text](PYTHON-DAILY-TASKS.md#day-32-copy-nested-trade-data-safely) |
 
 ## Day 31: equality and identity
 

@@ -51,11 +51,11 @@
     {
       "source_issue": 2,
       "day": 32,
-      "status": "reserved",
-      "replacement_issue": null,
+      "status": "verified",
+      "replacement_issue": 40,
       "explanation_path": "docs/PYTHON-COACHING.md",
       "explanation_anchor": "day-32-copying-nested-records",
-      "explanation_revision": null,
+      "explanation_revision": "a9298faf15b00bd0ff0cbb6e3eae2b30cc08de75",
       "reviewed_commit": "25ad4bb5845f140834cafe6e485318512a008aa7",
       "review_url": "https://github.com/Prem-Tomar/production-data-ai-engineering/pull/39#pullrequestreview-5305349273",
       "assignee": "chouhansujeet20-ctrl"

@@ -1118,6 +1118,8 @@ Search for "Python dictionary equality identity is vs equals". Check the values 
 
 ## Day 32: Copy nested trade data safely
 
+[GitHub issue #40](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/40)
+
 ### Goal
 
 Prepare a trade record without changing the original nested data.
