@@ -34,7 +34,7 @@
     29,
     30
   ],
-  "next_day": 32,
+  "next_day": 33,
   "replacements": [
     {
       "source_issue": 1,
@@ -46,6 +46,18 @@
       "explanation_revision": "a0f8c739abf3f295b4e83cce7bf4681775c1f60f",
       "reviewed_commit": "2f7a5324518b59f5054874fef9950102ee5c7804",
       "review_url": "https://github.com/Prem-Tomar/production-data-ai-engineering/pull/36#pullrequestreview-5298537883",
+      "assignee": "chouhansujeet20-ctrl"
+    },
+    {
+      "source_issue": 2,
+      "day": 32,
+      "status": "reserved",
+      "replacement_issue": null,
+      "explanation_path": "docs/PYTHON-COACHING.md",
+      "explanation_anchor": "day-32-copying-nested-records",
+      "explanation_revision": null,
+      "reviewed_commit": "25ad4bb5845f140834cafe6e485318512a008aa7",
+      "review_url": "https://github.com/Prem-Tomar/production-data-ai-engineering/pull/39#pullrequestreview-5305349273",
       "assignee": "chouhansujeet20-ctrl"
     }
   ]

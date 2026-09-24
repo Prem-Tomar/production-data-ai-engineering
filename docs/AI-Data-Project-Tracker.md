@@ -7,10 +7,11 @@ Companion to `AI-Data-Architecture-Roadmap.md`. Planning horizon: 24 months at t
 | Task | Review date | Evidence and outcome |
 |---|---|---|
 | [Day 01 / issue #1](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/1) | September 24, 2026 | [PR #36 review](https://github.com/Prem-Tomar/production-data-ai-engineering/pull/36#pullrequestreview-5298537883), commit `2f7a532`: fresh Python run printed 30, 50 and 14 and exited successfully. The naming defect is fixed, the issue is closed and PR #36 is merged into master. |
+| [Day 02 / issue #2](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/2) | September 24, 2026 | [PR #39 review](https://github.com/Prem-Tomar/production-data-ai-engineering/pull/39#pullrequestreview-5305349273), commit `25ad4bb`: fresh Python run printed 5, 32, 40 and 4. During review, a temporary `int("four")` variant raised ValueError; restoring `int("4")` succeeded. The behavior checks pass, the issue is closed and PR #39 is merged into master. |
 
 [Day 31 / issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38) replenishes the queue and is assigned only to Sujeet (`chouhansujeet20-ctrl`). Its [explanation and example](PYTHON-COACHING.md#day-31-equality-and-identity) are published; the exercise remains planned.
 
-This evidence covers the introductory calculation only. The ETL deliverable, intermediate Python gate and production milestones remain unfulfilled. Replenishment is tracked in [the queue ledger](learning-queue.json).
+This evidence covers the introductory calculations and number/text conversion only. The ETL deliverable, intermediate Python gate and production milestones remain unfulfilled. Replenishment is tracked in [the queue ledger](learning-queue.json).
 
 ## Setup decisions
 
@@ -33,7 +34,7 @@ Technology depth and production deployability are required outcomes. Use the [de
 
 | Cross-cutting outcome | Current status | Evidence |
 |---|---|---|
-| First 30 days: coached working/intermediate Python and useful local ETL tool | In progress: Day 1 reviewed; local ETL and independent Day 30 assessment remain pending | [Python coaching and gates](PYTHON-COACHING.md) and reviewed-task evidence above |
+| First 30 days: coached working/intermediate Python and useful local ETL tool | In progress: Days 1–2 reviewed; local ETL and independent Day 30 assessment remain pending | [Python coaching and gates](PYTHON-COACHING.md) and reviewed-task evidence above |
 | Advanced Python during platform implementation through expert defense | Planned | [Master-level syllabus](PYTHON-COACHING.md) |
 | Technology-specific edge cases, limits and independent variations | Planned; record per technology in milestone evidence | None yet |
 | Repeatable staging deployment with versioned artifacts and infrastructure | Not implemented | None yet |

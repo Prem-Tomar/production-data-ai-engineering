@@ -227,6 +227,7 @@ New tasks extend the queue as reviewed issues close. Their day numbers indicate 
 | Day | Explanation | Task |
 |---|---|---|
 | 31 | [Equality and identity](#day-31-equality-and-identity) | [Issue #38](https://github.com/Prem-Tomar/production-data-ai-engineering/issues/38) / [task text](PYTHON-DAILY-TASKS.md#day-31-compare-trade-records-by-value) |
+| 32 | [Copying nested records](#day-32-copying-nested-records) | [Task text](PYTHON-DAILY-TASKS.md#day-32-copy-nested-trade-data-safely) |
 
 ## Day 31: equality and identity
 
@@ -251,6 +252,26 @@ The output is `True`, `False`, `True`, `False`, `3`, on separate lines. The two 
 A repeated trade read from a file can arrive as a new dictionary with unchanged contents. Testing identity alone would incorrectly treat it as different data. For this exercise, compare the supplied trade IDs and field values to distinguish a new trade, an unchanged replay and a conflicting version. Inspect equality and identity separately when the starter gives an unexpected classification.
 
 Keep the scope to the supplied fields and types. Dictionary equality is not financial-data validation: it does not normalize currency labels, convert text quantities or decide which fields define a real business duplicate. Those policies must be specified before using this idea in the production replay pipeline. Avoid using string or small-integer identity experiments to infer value equality; implementation reuse can make those observations misleading.
+
+## Day 32: copying nested records
+
+Assigning another name to a dictionary does not copy it. Calling its `copy()` method creates a new outer dictionary, but this is a shallow copy: values inside it still refer to the same objects. If a value is a mutable list or dictionary, changing that nested object can affect both records.
+
+```python
+source = {"account_id": "A7", "labels": ["new"]}
+shallow = source.copy()
+
+print(source is shallow)
+print(source["labels"] is shallow["labels"])
+shallow["labels"].append("checked")
+print(source["labels"])
+```
+
+The output is `False`, `True`, then `['new', 'checked']`. The outer dictionaries are different, but both contain a reference to the same list. `append()` mutates that shared list. Assigning a completely new list to `shallow["labels"]` would instead replace one dictionary entry; that would not replace the entry in `source`.
+
+For a prepared trade that must leave its source intact, identify every nested mutable object the transformation can change. Copying those objects explicitly or using a deep copy can provide independent data for this task's dictionaries, lists and strings. A deep copy recursively copies nested data; it is not the same operation as copying only the outer dictionary. The searchable hint in the task points to the standard-library tool.
+
+Check isolation by changing one returned record and inspecting both the source and another result. Checking only that the outer dictionaries have different identities misses this bug. Avoid copying more than the use case needs in large pipelines: copying also takes time and memory. This exercise uses small in-memory records and does not establish transaction or database isolation.
 
 ## Master-level Python syllabus and gates
 

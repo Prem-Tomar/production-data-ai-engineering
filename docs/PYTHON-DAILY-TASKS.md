@@ -1115,3 +1115,51 @@ Run it with `python src/trade_ingestion/day31.py` from the repository root. Fix 
 ### Hint
 
 Search for "Python dictionary equality identity is vs equals". Check the values and IDs you are comparing, not only whether the two names refer to one object.
+
+## Day 32: Copy nested trade data safely
+
+### Goal
+
+Prepare a trade record without changing the original nested data.
+
+### Context
+
+A shallow copy creates a new outer dictionary but can share dictionaries and lists stored inside it. An enrichment adds or changes derived data; preserving the source helps later comparisons and replay checks.
+
+Read the [explanation and example](PYTHON-COACHING.md#day-32-copying-nested-records).
+
+### Task
+
+Create `src/trade_ingestion/day32.py` and any missing folders. Run this starter:
+
+```python
+def prepare_trade(raw):
+    prepared = raw.copy()
+    prepared["fees"]["broker"] = "0.50"
+    prepared["tags"].append("prepared")
+    return prepared
+
+raw = {
+    "trade_id": "T1",
+    "fees": {"broker": "0.25"},
+    "tags": ["source"],
+}
+first = prepare_trade(raw)
+print(raw)
+print(first)
+```
+
+Run `python src/trade_ingestion/day32.py` from the repository root. Observe how the starter changes raw's nested fields, then fix the copying so only the returned record is enriched. Keep the same function signature and supplied values. Call it twice using the same original input; then append `"second-only"` to the second result's tags and inspect all three records.
+
+Use only the supplied strings, dictionaries and lists. Fee calculation, input validation and file/database storage are outside this task.
+
+### Acceptance Criteria
+
+- [ ] The starter changes raw's fee to `"0.50"` and tags to `["source", "prepared"]`, demonstrating the defect.
+- [ ] After repair, raw remains T1 with fee `"0.25"` and tags `["source"]`; the first result has fee `"0.50"` and tags `["source", "prepared"]`.
+- [ ] A second call starts from unchanged raw and adds exactly one `"prepared"` tag. Appending `"second-only"` to that result changes neither raw nor the first result.
+- [ ] Each result's fees dictionary and tags list are separate objects from the input's and the other result's corresponding objects.
+
+### Hint
+
+Search for "Python shallow copy nested dictionary deepcopy". Inspect both the outer dictionary and the objects stored inside it; a new outer dictionary alone does not guarantee independent nested data.
